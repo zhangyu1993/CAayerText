@@ -19,6 +19,8 @@
 		C62185191D51919D0077E59E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62185181D51919D0077E59E /* QuartzCore.framework */; };
 		C621851D1D519A500077E59E /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C621851C1D519A500077E59E /* 0.jpg */; };
 		C621851F1D51A17C0077E59E /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C621851E1D51A17C0077E59E /* 6.jpg */; };
+		C63514091D59C1CB00A56537 /* DrawStar.m in Sources */ = {isa = PBXBuildFile; fileRef = C63514051D59C1CB00A56537 /* DrawStar.m */; };
+		C635140A1D59C1CB00A56537 /* StarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C63514071D59C1CB00A56537 /* StarsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		C62185181D51919D0077E59E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C621851C1D519A500077E59E /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		C621851E1D51A17C0077E59E /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		C63514051D59C1CB00A56537 /* DrawStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawStar.m; sourceTree = "<group>"; };
+		C63514061D59C1CB00A56537 /* StarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarsView.h; sourceTree = "<group>"; };
+		C63514071D59C1CB00A56537 /* StarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarsView.m; sourceTree = "<group>"; };
+		C63514081D59C1CB00A56537 /* DrawStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawStar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 				C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */,
 				C621851E1D51A17C0077E59E /* 6.jpg */,
 				C621851C1D519A500077E59E /* 0.jpg */,
+				C63514081D59C1CB00A56537 /* DrawStar.h */,
+				C63514051D59C1CB00A56537 /* DrawStar.m */,
+				C63514061D59C1CB00A56537 /* StarsView.h */,
+				C63514071D59C1CB00A56537 /* StarsView.m */,
 				C62184E81D5191690077E59E /* AppDelegate.h */,
 				C62184E91D5191690077E59E /* AppDelegate.m */,
 				C62184EB1D5191690077E59E /* ViewController.h */,
@@ -287,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62184ED1D5191690077E59E /* ViewController.m in Sources */,
+				C63514091D59C1CB00A56537 /* DrawStar.m in Sources */,
 				C62184EA1D5191690077E59E /* AppDelegate.m in Sources */,
+				C635140A1D59C1CB00A56537 /* StarsView.m in Sources */,
 				C62184E71D5191690077E59E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

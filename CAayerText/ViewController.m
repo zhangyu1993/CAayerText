@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "StarsView.h"
 @interface ViewController ()
 @property (nonatomic, strong) UIView * LayerView;
 @property (nonatomic, strong) CALayer *textLayer;
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configUI];
+    //[self configUI];
     //[self creatCor];
     //[self creat3DView];
     //[self creatEmitterLayer];
@@ -28,6 +29,13 @@
     //[self creatAnimation1];
     //[self creatAnimation2];
     //[self creatTimeoffset];
+    [self creatStar];
+}
+
+-(void)creatStar
+{
+    StarsView *view = [[StarsView alloc] initWithFrame:CGRectMake(10, 100, 100, 30) starNumber:5 starWidth:20 starNormalColor:[UIColor redColor] starLightColor:[UIColor yellowColor]];
+    [self.view addSubview:view];
 }
 
 -(void)creatTimeoffset
