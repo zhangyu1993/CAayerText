@@ -34,8 +34,10 @@
 
 -(void)creatStar
 {
-    StarsView *view = [[StarsView alloc] initWithFrame:CGRectMake(10, 100, 100, 30) starNumber:5 starWidth:20 starNormalColor:[UIColor redColor] starLightColor:[UIColor yellowColor]];
+    StarsView *view = [[StarsView alloc] initWithFrame:CGRectMake(10, 100, 250, 50) starNumber:5 starWidth:50 starNormalColor:[UIColor redColor] starLightColor:[UIColor yellowColor]];
     [self.view addSubview:view];
+    
+    
 }
 
 -(void)creatTimeoffset

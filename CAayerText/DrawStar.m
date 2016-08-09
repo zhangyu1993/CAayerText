@@ -25,10 +25,15 @@
     CAShapeLayer *backgroundLayer = [CAShapeLayer layer];
     backgroundLayer.path = bgPath.CGPath;
     backgroundLayer.lineWidth = height;
+
     [self.layer addSublayer:backgroundLayer];
+    
     self.backgroundLayer = backgroundLayer;
 
+    
     [self drawStarMethod];
+    
+
     return self;
 }
 /**
@@ -57,6 +62,7 @@
     //遮盖
     CAShapeLayer * starLayer = [CAShapeLayer layer];
     starLayer.path = star.CGPath;
+
     self.layer.mask = starLayer;
 }
 #pragma mark --- setter方法
