@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C607A04F1D5326DF009CFF01 /* QQ20160804-0.png in Resources */ = {isa = PBXBuildFile; fileRef = C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */; };
 		C62184E71D5191690077E59E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C62184E61D5191690077E59E /* main.m */; };
 		C62184EA1D5191690077E59E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C62184E91D5191690077E59E /* AppDelegate.m */; };
 		C62184ED1D5191690077E59E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62184EC1D5191690077E59E /* ViewController.m */; };
@@ -15,6 +16,9 @@
 		C62184F51D5191690077E59E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62184F31D5191690077E59E /* LaunchScreen.storyboard */; };
 		C62185001D5191690077E59E /* CAayerTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C62184FF1D5191690077E59E /* CAayerTextTests.m */; };
 		C621850B1D5191690077E59E /* CAayerTextUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C621850A1D5191690077E59E /* CAayerTextUITests.m */; };
+		C62185191D51919D0077E59E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62185181D51919D0077E59E /* QuartzCore.framework */; };
+		C621851D1D519A500077E59E /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C621851C1D519A500077E59E /* 0.jpg */; };
+		C621851F1D51A17C0077E59E /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C621851E1D51A17C0077E59E /* 6.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20160804-0.png"; sourceTree = "<group>"; };
 		C62184E21D5191690077E59E /* CAayerText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAayerText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62184E61D5191690077E59E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C62184E81D5191690077E59E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +56,9 @@
 		C62185061D5191690077E59E /* CAayerTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAayerTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621850A1D5191690077E59E /* CAayerTextUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAayerTextUITests.m; sourceTree = "<group>"; };
 		C621850C1D5191690077E59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62185181D51919D0077E59E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C621851C1D519A500077E59E /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		C621851E1D51A17C0077E59E /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62185191D51919D0077E59E /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 		C62184D91D5191690077E59E = {
 			isa = PBXGroup;
 			children = (
+				C62185181D51919D0077E59E /* QuartzCore.framework */,
 				C62184E41D5191690077E59E /* CAayerText */,
 				C62184FE1D5191690077E59E /* CAayerTextTests */,
 				C62185091D5191690077E59E /* CAayerTextUITests */,
@@ -101,6 +111,9 @@
 		C62184E41D5191690077E59E /* CAayerText */ = {
 			isa = PBXGroup;
 			children = (
+				C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */,
+				C621851E1D51A17C0077E59E /* 6.jpg */,
+				C621851C1D519A500077E59E /* 0.jpg */,
 				C62184E81D5191690077E59E /* AppDelegate.h */,
 				C62184E91D5191690077E59E /* AppDelegate.m */,
 				C62184EB1D5191690077E59E /* ViewController.h */,
@@ -243,9 +256,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C621851D1D519A500077E59E /* 0.jpg in Resources */,
+				C607A04F1D5326DF009CFF01 /* QQ20160804-0.png in Resources */,
 				C62184F51D5191690077E59E /* LaunchScreen.storyboard in Resources */,
 				C62184F21D5191690077E59E /* Assets.xcassets in Resources */,
 				C62184F01D5191690077E59E /* Main.storyboard in Resources */,
+				C621851F1D51A17C0077E59E /* 6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +514,7 @@
 				C62185111D5191690077E59E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C62185121D5191690077E59E /* Build configuration list for PBXNativeTarget "CAayerTextTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +523,7 @@
 				C62185141D5191690077E59E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C62185151D5191690077E59E /* Build configuration list for PBXNativeTarget "CAayerTextUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +532,7 @@
 				C62185171D5191690077E59E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
