@@ -19,6 +19,7 @@
 		C62185191D51919D0077E59E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62185181D51919D0077E59E /* QuartzCore.framework */; };
 		C621851D1D519A500077E59E /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C621851C1D519A500077E59E /* 0.jpg */; };
 		C621851F1D51A17C0077E59E /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C621851E1D51A17C0077E59E /* 6.jpg */; };
+		C62645821D795E7500286CDE /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = C62645811D795E7500286CDE /* Sparkle.png */; };
 		C63514091D59C1CB00A56537 /* DrawStar.m in Sources */ = {isa = PBXBuildFile; fileRef = C63514051D59C1CB00A56537 /* DrawStar.m */; };
 		C635140A1D59C1CB00A56537 /* StarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C63514071D59C1CB00A56537 /* StarsView.m */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		C62185181D51919D0077E59E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C621851C1D519A500077E59E /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		C621851E1D51A17C0077E59E /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		C62645811D795E7500286CDE /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
 		C63514051D59C1CB00A56537 /* DrawStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawStar.m; sourceTree = "<group>"; };
 		C63514061D59C1CB00A56537 /* StarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarsView.h; sourceTree = "<group>"; };
 		C63514071D59C1CB00A56537 /* StarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarsView.m; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		C62184E41D5191690077E59E /* CAayerText */ = {
 			isa = PBXGroup;
 			children = (
+				C62645811D795E7500286CDE /* Sparkle.png */,
 				C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */,
 				C621851E1D51A17C0077E59E /* 6.jpg */,
 				C621851C1D519A500077E59E /* 0.jpg */,
@@ -271,6 +274,7 @@
 				C62184F51D5191690077E59E /* LaunchScreen.storyboard in Resources */,
 				C62184F21D5191690077E59E /* Assets.xcassets in Resources */,
 				C62184F01D5191690077E59E /* Main.storyboard in Resources */,
+				C62645821D795E7500286CDE /* Sparkle.png in Resources */,
 				C621851F1D51A17C0077E59E /* 6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CAayerText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lnxd.CAayerText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CAayerText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lnxd.CAayerText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
