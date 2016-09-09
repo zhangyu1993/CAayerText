@@ -17,6 +17,10 @@
 @property (strong, nonatomic) CAEmitterLayer *chargeLayer;
 @property (strong, nonatomic) CAEmitterLayer *explosionLayer;
 
+
+@property (nonatomic,assign) NSInteger starNum;
+@property (nonatomic,strong) CATextLayer *textLayer2;
+
 @end
 
 @implementation ViewController
@@ -34,17 +38,18 @@
     //[self creatAnimation2];
     //[self creatTimeoffset];
     //[self creatStar];
-    [self setup];
+    //[self setup];
+    [self creatAnimationCircle];
 }
 
 -(void)creatStar
 {
     StarsView *view = [[StarsView alloc] initWithFrame:CGRectMake(10, 100, 250, 50) starNumber:5 starWidth:50 starNormalColor:[UIColor redColor] starLightColor:[UIColor yellowColor]];
     [self.view addSubview:view];
-    
-    
 }
-
+/**
+ *  开门动画
+ */
 -(void)creatTimeoffset
 {
     CALayer *contentLayer = [CALayer layer];
@@ -54,7 +59,10 @@
     _textLayer = [CALayer layer];
     _textLayer.frame = CGRectMake(0, 0, 128, 256);
     _textLayer.position = CGPointMake(150 - 64, 150);
+    
+    //锚点
     _textLayer.anchorPoint = CGPointMake(0, 0.5);
+    
     _textLayer.backgroundColor = [UIColor redColor].CGColor;
     [contentLayer addSublayer:_textLayer];
     
@@ -88,7 +96,9 @@
     self.textLayer.timeOffset = timeoffset;
     [pan setTranslation:CGPointZero inView:self.view];
 }
-
+/**
+ *  动画组
+ */
 -(void)creatAnimation2
 {
     UIBezierPath *path = [[UIBezierPath alloc] init];
@@ -116,20 +126,29 @@
     CABasicAnimation *animation2 = [CABasicAnimation animation];
     animation2.keyPath = @"transform.rotation";
     animation2.byValue = @(M_PI * 2);
+
   //  animation2.repeatCount = MAXFLOAT;
     
     CABasicAnimation *animation3 = [CABasicAnimation animation];
     animation3.keyPath = @"backgroundColor";
     animation3.toValue = (__bridge id)[UIColor redColor].CGColor;
+   
+  
     
     CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
     group.animations = @[animation1,animation2,animation3];
     group.duration = 3.0;
-    
+
+    //下面两行设置动画结束时不回到原位
+    group.fillMode = kCAFillModeForwards;
+    group.removedOnCompletion = NO;
     [colorLayer addAnimation:group forKey:nil];
     
 }
 
+/**
+ *  旋转动画
+ */
 -(void)creatAnimation1
 {
     CALayer *layer = [CALayer layer];
@@ -142,6 +161,7 @@
     animation.keyPath = @"transform.rotation";
     animation.duration = 2.0;
     animation.byValue = @(M_PI * 2);
+    animation.repeatCount = MAXFLOAT;
     [layer addAnimation:animation forKey:nil];
     
 }
@@ -175,7 +195,9 @@
     [layer addAnimation:animation forKey:nil];
 }
 
-
+/**
+ *  背景颜色变换动画
+ */
 -(void)creatAnimation
 {
     CALayer *colorLayer = [CALayer layer];
@@ -198,12 +220,14 @@
 
 
 
-
+/**
+ *  画人
+ */
 -(void)configUI
 {
     UIBezierPath * path = [[UIBezierPath alloc] init];
     [path moveToPoint:CGPointMake(175, 100)];
-    [path addArcWithCenter:CGPointMake(150, 100) radius:25 startAngle:0 endAngle:2*M_PI clockwise:YES];
+    [path addArcWithCenter:CGPointMake(150, 100) radius:25 startAngle:0 endAngle:2.0*M_PI clockwise:YES];
     
     [path moveToPoint:CGPointMake(150, 125)];
     [path addLineToPoint:CGPointMake(150, 175)];
@@ -215,14 +239,15 @@
     [path moveToPoint:CGPointMake(100, 150)];
     [path addLineToPoint:CGPointMake(200, 150)];
     
-    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.strokeColor = [UIColor redColor].CGColor;
-    shapeLayer.fillColor = [UIColor clearColor].CGColor;
-    shapeLayer.lineWidth = 5;
-    shapeLayer.lineJoin = kCALineJoinRound;
-    shapeLayer.lineCap = kCALineCapRound;
-    shapeLayer.path = path.CGPath;
-    [self.view.layer addSublayer:shapeLayer];
+    CAShapeLayer *shapeLayer2 = [CAShapeLayer layer];
+    shapeLayer2.strokeColor = [UIColor redColor].CGColor;
+    shapeLayer2.fillColor = [UIColor clearColor].CGColor;
+    shapeLayer2.lineWidth = 5;
+    shapeLayer2.lineJoin = kCALineJoinRound;
+    shapeLayer2.lineCap = kCALineCapRound;
+    shapeLayer2.path = path.CGPath;
+  //  shapeLayer2.masksToBounds = YES;
+    [self.view.layer addSublayer:shapeLayer2];
     
     CABasicAnimation *bas=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     bas.duration=3;
@@ -231,10 +256,88 @@
     bas.delegate=self;
     bas.fromValue=[NSNumber numberWithInteger:0];
     bas.toValue=[NSNumber numberWithInteger:1];
-    [shapeLayer addAnimation:bas forKey:nil];
+    [shapeLayer2 addAnimation:bas forKey:nil];
+    
+}
+/**
+ *  防数字增长动画 画圆
+ */
+-(void)creatAnimationCircle
+{
+    UIBezierPath * path1 = [[UIBezierPath alloc] init];
+    [path1 addArcWithCenter:CGPointMake(150, 200) radius:100 startAngle:0 endAngle:2*M_PI clockwise:YES];
+    
+    CAShapeLayer *shapeLayer1 = [CAShapeLayer layer];
+    shapeLayer1.strokeColor = [UIColor darkGrayColor].CGColor;
+    shapeLayer1.fillColor = [UIColor yellowColor].CGColor;
+    shapeLayer1.lineWidth = 5;
+    shapeLayer1.lineJoin = kCALineJoinRound;
+    shapeLayer1.lineCap = kCALineCapRound;
+    shapeLayer1.path = path1.CGPath;
+    shapeLayer1.contentsScale = [UIScreen mainScreen].scale;
+    [self.view.layer addSublayer:shapeLayer1];
+    
+    
+    UIBezierPath * path2 = [[UIBezierPath alloc] init];
+    [path2 addArcWithCenter:CGPointMake(150, 200) radius:100 startAngle:0 endAngle:2.0*M_PI clockwise:YES];
+    
+    CAShapeLayer *shapeLayer2 = [CAShapeLayer layer];
+    shapeLayer2.strokeColor = [UIColor redColor].CGColor;
+    shapeLayer2.fillColor = [UIColor clearColor].CGColor;
+    shapeLayer2.lineWidth = 5;
+    shapeLayer2.lineJoin = kCALineJoinRound;
+    shapeLayer2.lineCap = kCALineCapRound;
+    shapeLayer2.path = path2.CGPath;
+    shapeLayer2.contentsScale = [UIScreen mainScreen].scale;
+    [self.view.layer addSublayer:shapeLayer2];
+    
+  
+    _textLayer2 = [[CATextLayer alloc] init];
+    _textLayer2.position = CGPointMake(150, 200);
+    _textLayer2.bounds = CGRectMake(0, 0, 100, 50);
+
+    UIFont *font = [UIFont systemFontOfSize:40];
+    CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+    _textLayer2.font = fontRef;
+    _textLayer2.fontSize = font.pointSize;
+    _textLayer2.string = @"0";
+    _textLayer2.foregroundColor = [UIColor redColor].CGColor;
+    _textLayer2.alignmentMode = kCAAlignmentCenter;
+    _textLayer2.wrapped = YES;
+    _textLayer2.contentsScale = [UIScreen mainScreen].scale;
+    
+    [self.view.layer addSublayer:_textLayer2];
+    
+    _starNum = 0;
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.8/100.0 target:self selector:@selector(changeTextLayer) userInfo:nil repeats:YES];
+    [timer fire];
+    
+    
+    CABasicAnimation *bas1=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    bas1.duration=3;
+    CAMediaTimingFunction *f = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    bas1.timingFunction = f;
+    bas1.delegate=self;
+    bas1.fromValue=[NSNumber numberWithInteger:0];
+    bas1.toValue=[NSNumber numberWithInteger:1];
+    [shapeLayer2 addAnimation:bas1 forKey:nil];
     
 }
 
+-(void)changeTextLayer
+{
+    _starNum++;
+    if (_starNum <= 100) {
+      _textLayer2.string = [NSString stringWithFormat:@"%ld", _starNum];
+        
+    }
+    NSLog(@"%ld", _starNum);
+}
+
+/**
+ *  自定义圆角位置
+ */
 -(void)creatCor
 {
     CGRect rect = CGRectMake(50, 50, 100, 100);
@@ -252,7 +355,9 @@
     [self.view.layer addSublayer:shapeLayer];
 
 }
-
+/**
+ *  颜色渐变
+ */
 -(void)creat3DView
 {
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
