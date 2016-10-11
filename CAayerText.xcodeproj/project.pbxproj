@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60644C21DACED6600C92CA6 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60644C11DACED6600C92CA6 /* BaseNavController.m */; };
 		C607A04F1D5326DF009CFF01 /* QQ20160804-0.png in Resources */ = {isa = PBXBuildFile; fileRef = C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */; };
 		C62184E71D5191690077E59E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C62184E61D5191690077E59E /* main.m */; };
 		C62184EA1D5191690077E59E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C62184E91D5191690077E59E /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C60644C01DACED6600C92CA6 /* BaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
+		C60644C11DACED6600C92CA6 /* BaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavController.m; sourceTree = "<group>"; };
 		C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20160804-0.png"; sourceTree = "<group>"; };
 		C62184E21D5191690077E59E /* CAayerText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAayerText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62184E61D5191690077E59E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 		C62184E41D5191690077E59E /* CAayerText */ = {
 			isa = PBXGroup;
 			children = (
+				C60644C01DACED6600C92CA6 /* BaseNavController.h */,
+				C60644C11DACED6600C92CA6 /* BaseNavController.m */,
 				C62645811D795E7500286CDE /* Sparkle.png */,
 				C607A04E1D5326DF009CFF01 /* QQ20160804-0.png */,
 				C621851E1D51A17C0077E59E /* 6.jpg */,
@@ -302,6 +307,7 @@
 			files = (
 				C62184ED1D5191690077E59E /* ViewController.m in Sources */,
 				C63514091D59C1CB00A56537 /* DrawStar.m in Sources */,
+				C60644C21DACED6600C92CA6 /* BaseNavController.m in Sources */,
 				C62184EA1D5191690077E59E /* AppDelegate.m in Sources */,
 				C635140A1D59C1CB00A56537 /* StarsView.m in Sources */,
 				C62184E71D5191690077E59E /* main.m in Sources */,
